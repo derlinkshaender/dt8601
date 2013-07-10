@@ -5,3 +5,17 @@ docs/de/_build/
 docs/en/_build/
 docs/en/_static/
 docs/de/_static/
+.coverage
+MANIFEST
+coverage.xml
+nosetests.xml
+violations.pyflakes.txt
+docs/_build
+requests.egg-info/
+*.pyc
+*.swp
+env/
+docs/build/
+.workon
+.DS_Store
+.idea/
