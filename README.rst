@@ -49,9 +49,9 @@ You can find more information in the ``docs`` folder (es gibt auch eine deutsche
 Where's the documentation?
 **************************
 
-You may find the detailed docs in English at `docs/build/html/en/index.html`_
+You may find the detailed docs in English at docs/build/html/en/index.html
 
-Die deutsche Version der Dokumenation beginnt hier: `docs/build/html/de/index.html`_
+Die deutsche Version der Dokumenation finden Sie unter docs/build/html/de/index.html
 
 
 Thanks also to
