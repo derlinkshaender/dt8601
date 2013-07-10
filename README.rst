@@ -45,6 +45,14 @@ As easy as::
 You can find more information in the ``docs`` folder (es gibt auch eine deutsche Doku dort!)
 
 
+**************************
+Where's the documentation?
+**************************
+
+You may find the detailed docs in English at `docs/build/html/en/index.html`_
+
+Die deutsche Version der Dokumenation beginnt hier: `docs/build/html/de/index.html`_
+
 
 Thanks also to
 ==============
