@@ -1,0 +1,59 @@
+
+
+Date
+====
+
+YYYY-MM-DD
+YYYYMMDD (8)
+
+YYYY-MM
+YYYYMM (6)
+
+YYYY (4)
+
+YYYY-W##
+YYYYW## (7), but date[4] == 'W'
+
+YYYY-W##-#  2013-W02-1 (1=MO)
+YYYYW### (8), but date[4] == 'W'
+
+YYYY-DDD  DDD ::= 001-366
+YYYYDDD (7)
+
+
+ * date part ends at $ or at 'T'
+ * remove all hypens in date part to get condensed form, then parse
+
+
+Time
+====
+
+hh:mm:ss
+hhmmss
+
+hh:mm
+hhmm
+
+hh
+
+optional .mmmm
+
+Tag X 24:00 == Tag X+1 00:00 !!
+
+
+Datum und Zeit zusammen <datum>T<zeit>
+
+
+Timezone
+========
+
+Z   == Zulu Time  (1)
+
++hh:mm   -hh:mm   (6)
++hhmm    -hhmm    (5)
++hh      -hh      (3)
+
+
+
+
+

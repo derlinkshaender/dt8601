@@ -1,0 +1,81 @@
+
+
+Holiday grammar
+===============
+
+
+A holiday may either occur on a fixed calendar date or be variable. This is done by using 'F' or 'V' as
+the first letter of the definition.
+
+
+## General Rule
+
+sep ::= ':'
+
+type ::= fixed | variable
+
+fixed ::= 'F' sep month '-' day
+
+base ::= 'easter' | 'advent' | 'jan'..'dec'
+
+variable ::= 'V' sep base formula
+
+Fixed Holidays have four fields:
+ - 'F'
+ - <month>-<day>
+ - <spread>
+ - <validity>
+
+Variable Holidays have four fields
+ - 'V'
+ - <base>
+ - <formula>
+ - <spread>
+ - <validity>
+
+
+### Christi Himmelfahrt in DE:
+
+V:Easter+39
+
+or you could use
+
+V:Easter+TH+TH+TH+TH+TH+TH
+
+### October Bank Holiday in EI:
+
+V:Nov-1-MO  (last monday in october)
+
+### Independence Day in the U.S.A.:
+
+F:07-04:SA-FR,SU+MO:
+
+ * fixed
+ * if saturday, we use friday for the day off
+ * if sunday, we use monday for the day off
+
+### Martin Luther King Day in the U.S.A.:
+
+V:Feb+MO+MO+MO
+
+ * variable
+ * base date is "Feb" (means start of February)
+ * 3rd monday
+
+### Christmas Day and Boxing Day in the UK:
+
+F:12-25:SA+TU,SU+TU:
+F:12-26:SA+MO,SU+MO:
+
+ * fixed
+ * if the day is on a weekend, we shift to monday or tuesday
+ * no validity means always
+
+
+### King's Day and Queen's Day in the Netherlands:
+
+F:04-30:SU-SA:0-2013
+F:04-27:SU-SA:2014-0
+
+ * fixed
+ * if the day is a sunday, we use the day before, validity years
