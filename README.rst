@@ -49,9 +49,11 @@ You can find more information in the ``docs`` folder (es gibt auch eine deutsche
 Where's the documentation?
 **************************
 
-You may find the detailed docs in English at docs/build/html/en/index.html
+You may find all the reStructured text sources for the documentation here in the repo.
+Currently there is a German version and an English version available (I'm a bit shaky on my English,
+so I would be glad to receive some feedback on possible improvements, thanks).
 
-Die deutsche Version der Dokumenation finden Sie unter docs/build/html/de/index.html
+If you just like to read the redered version, please click here: http://pythonhosted.org/dt8601/
 
 
 Thanks also to
