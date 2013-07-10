@@ -1,1 +1,7 @@
 workspace.xml
+dist/
+build/bdist.macosx-10.7-intel build/lib
+docs/de/_build/
+docs/en/_build/
+docs/en/_static/
+docs/de/_static/
