@@ -55,11 +55,6 @@ so I would be glad to receive some feedback on possible improvements, thanks).
 
 If you just like to read the redered version, please click here: http://pythonhosted.org/dt8601/
 
-:doc:`docs/en/intro.rst`
-
-:doc:`docs/en/tutorial.rst`
-
-:doc:`docs/en/ref.rst`
 
 Thanks also to
 ==============
