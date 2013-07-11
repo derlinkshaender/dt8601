@@ -11,6 +11,7 @@ Contents
    :maxdepth: 2
 
    Introduction <intro>
+   Parsing ISO8601 <tutorial>
    Objects <objects>
    Define holidays <ref>
 

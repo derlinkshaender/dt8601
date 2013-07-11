@@ -807,6 +807,7 @@ def iso8601_timezone_parser(input_string):
         _h = 0
         _m = 0
         _off = '+'  # does not really matter :-)
+        _tzfmt = 'Z'
     else:
         if tzlen not in [3, 5]:
             raise ValueError('time zone code has invalid length')
@@ -815,8 +816,10 @@ def iso8601_timezone_parser(input_string):
             _h = int(work[1:3])
             if tzlen == 3:
                 _m = '0'  # hours only means 0 minutes
+                _tzfmt = 'HH'
             else:
                 _m = int(work[3:5])
+                _tzfmt = 'HHMM'
 
     # build a full tz string in canonical form and check if in list of valid timezones
     _tzstr = '{off}{hr:02d}:{mi:02d}'.format(off=_off, hr=_h, mi=_m)
@@ -827,7 +830,7 @@ def iso8601_timezone_parser(input_string):
     if _off == '-':
         _tzoffset = _tzoffset * -1
 
-    return {'tz_offset': _tzoffset, 'timezoneformat': '+TZ'}
+    return {'tz_offset': _tzoffset, 'timezoneformat': _tzfmt}
 
     
 def iso8601_date_string(year, month, day, isoformat='YYYY-MM-DD', separator='-'):
