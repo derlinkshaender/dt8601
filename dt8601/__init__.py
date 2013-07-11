@@ -17,6 +17,8 @@ __author__ = 'Armin Hanisch'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2013 Armin Hanisch'
 
+# TODO: provide option to dynamically retrieve list of leap seconds
+
 from . import definitions
 from . import datecore
 from .models import (IsoDate, IsoYear)

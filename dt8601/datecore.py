@@ -573,6 +573,21 @@ def week_day_name(year, month, day, country='DE', mode='EN'):
         raise ValueError('Invalid weekday mode (must be "en"|"short"|"long")')
 
 
+def is_leap_seconds_date(year, month, day):
+    """
+    check if a date has a leap second (23:59:60)
+    :param year: four-digit year
+    :param month: month from 1..12
+    :param day: day from 1..DAYS_IN_MONTH
+    :return: True or False
+    """
+    # TODO: get current list of leap seconds from NIST server
+    for ls in definitions.LEAPSECONDS:
+        if ls[0] == year and ls[1] == month and ls[2] == day:
+            return True
+    return False
+
+
 def iso8601_parser(input_string, separator='T'):
     """
     main wrapper method for the ISO8601 date/time parser
@@ -622,7 +637,6 @@ def iso8601_splitter(input_string, separator='T'):
             time_part = time_part[:has_timezone]
         else:
             timezone_part = None
-
     else:
         date_part = input_string
         time_part = None
@@ -701,11 +715,12 @@ def is_valid_time(hours, minutes, seconds):
     if ok:
         ok = minutes in xrange(0, 60)
     if ok:
-        ok = seconds in xrange(0, 61)  # leap seconds!
+        ok = seconds in xrange(0, 61)  # 0..60 for leap seconds
         if seconds == 60:
             ok = minutes == 59
+    # special iso8601 case for 24:00
     if not ok and hours == 24 and minutes == 0 and seconds == 0:
-        ok = True  # special iso8601 case for 24:00
+        ok = True
     return ok
 
 
